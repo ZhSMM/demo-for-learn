@@ -45,7 +45,7 @@ bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  s
 
 - **/root** 这是系统管理员(**root user**)的目录。对于系统来说，系统管理员就好比是上帝，它能对系统做任何事情，甚至包括删除你的文件。因此，请小心使用 **root** 帐号。
 
-#### [ **/**bin ] - 常见命令
+#### [ **/bin** ] - 常见命令
 
 包含二进制可执行文件，在单用户模式下，你需要使用的常见 **Linux** 命令都位于此目录下。
 
