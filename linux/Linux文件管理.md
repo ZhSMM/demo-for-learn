@@ -26,7 +26,7 @@ Linux目录结构：FSH(Filesystem Hierachy Standard)
 bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 ```
 
-![Linux文件结构](images/Linux文件结构.png)
+![Linux文件结构](./images/Linux文件结构.png)
 
 注意事项：在CentOS 7 中，如下几个 [ / ] 目录下的文件已经合并到其他文件夹去了，只剩下链接保留
 
