@@ -1,4 +1,4 @@
-package org.example.demo.inversion;
+package org.example.demo.principle.inversion;
 
 /**
  * @author <a href="https://www.songfang.top"> ZhSMM </a>

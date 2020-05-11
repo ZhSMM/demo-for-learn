@@ -1,4 +1,4 @@
-package org.example.demo.segregation;
+package org.example.demo.principle.segregation;
 
 /**
  * @author <a href="https://www.songfang.top"> ZhSMM </a>

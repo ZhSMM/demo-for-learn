@@ -1,4 +1,4 @@
-package org.example.demo.liskov.improve;
+package org.example.demo.principle.liskov.improve;
 
 /**
  * @author <a href="https://www.songfang.top"> ZhSMM </a>
