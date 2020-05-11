@@ -1,4 +1,4 @@
-package org.example.reference;
+package org.example.demo.thread.reference;
 
 import java.lang.ref.SoftReference;
 import java.util.concurrent.TimeUnit;

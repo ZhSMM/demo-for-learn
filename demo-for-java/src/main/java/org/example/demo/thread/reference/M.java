@@ -1,4 +1,4 @@
-package org.example.reference;
+package org.example.demo.thread.reference;
 
 /**
  * @author <a href="https://www.songfang.top"> ZhSMM </a>

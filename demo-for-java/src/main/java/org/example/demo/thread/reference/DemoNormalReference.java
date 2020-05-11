@@ -1,4 +1,4 @@
-package org.example.reference;
+package org.example.demo.thread.reference;
 
 import java.io.IOException;
 
