@@ -31,6 +31,6 @@ class DemoForMybatisPlusApplicationTests {
         user.setId((long) (size+1));
         userMapper.insert(user);
     }
-     
+
 
 }

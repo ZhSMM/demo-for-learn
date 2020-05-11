@@ -12,7 +12,7 @@
 - [文件编辑器](./linux/文件编辑器.md)
 - [Linux文件时间](./linux/Linux文件时间.md)
 - [ls常见用法](./linux/ls常见用法.md)
-- [Linux文件类型](Linux文件类型.md) 
+- [Linux文件类型](./linux/Linux文件类型.md) 
 - [type stat file](./linux/typestatfile.md)
 
 用户管理
