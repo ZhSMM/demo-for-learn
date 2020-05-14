@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${msg}"></title>
+</head>
+<body>
+<div th:text="'<h1>世界</h1>'"></div>
+<div th:utext="'<h1>世界</h1>'"></div>
+<input type="button" th:value="Hello">
+
+<span th:text="${#strings.isEmpty(msg)}"></span>
+<span th:text="${#strings.length(msg)}"></span>
+<span th:text="${#strings.indexOf(msg,2)}"></span><br/>
+<span th:text="${#dates.format(date)}"></span><br/>
+
+<div th:switch="${#dates.day(date)}">
+    <span th:case="'13'" th:text="'13号'"></span>
+    <span th:case="14" th:text="'14号'"></span>
+    <span th:case="*" th:text="${#dates.day(date)}"></span>
+</div>
+
+<br/>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Index</th>
+        <th>Count</th>
+        <th>Size</th>
+        <th>Odd</th>
+        <th>Even</th>
+        <th>First</th>
+        <th>Last</th>
+    </tr>
+<!--    value:迭代变量的值，item：迭代的每一条属性-->
+    <tr th:each="value,item:${list}">
+        <td th:text="${value.id}"></td>
+        <td th:text="${value.name}"></td>
+        <td th:text="${item.index}"></td>
+        <td th:text="${item.count}"></td>
+        <td th:text="${item.size}"></td>
+        <td th:text="${item.odd}"></td>
+        <td th:text="${item.even}"></td>
+        <td th:text="${item.first}"></td>
+        <td th:text="${item.last}"></td>
+    </tr>
+</table>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Index</th>
+        <th>Count</th>
+        <th>Size</th>
+        <th>Odd</th>
+        <th>Even</th>
+        <th>First</th>
+        <th>Last</th>
+    </tr>
+<!--    value:迭代变量的值，item：迭代的每一条属性-->
+    <tr th:each="v,item:${map}">
+        <td th:text="${v.value.id}"></td>
+        <td th:text="${v.value.name}"></td>
+        <td th:text="${item.index}"></td>
+        <td th:text="${item.count}"></td>
+        <td th:text="${item.size}"></td>
+        <td th:text="${item.odd}"></td>
+        <td th:text="${item.even}"></td>
+        <td th:text="${item.first}"></td>
+        <td th:text="${item.last}"></td>
+    </tr>
+</table>
+
+HttpRequest1：<span th:text="${#httpServletRequest.getAttribute('req')}"></span> <br/>
+HttpRequest2：<span th:text="${#request.getAttribute('req')}"></span> <br/>
+HttpRequestSession1：<span th:text="${#httpServletRequest.getSession().getAttribute('ses')}"></span> <br/>
+HttpRequestSession2：<span th:text="${#request.getSession().getAttribute('ses')}"></span> <br/>
+HttpRequestSession3：<span th:text="${#session.getAttribute('ses')}"></span> <br/>
+HttpRequestSession4：<span th:text="${session.ses}"></span> <br/>
+ServletContext1：<span th:text="${#httpServletRequest.getSession().getServletContext().getAttribute('app')}"></span> <br/>
+ServletContext2：<span th:text="${#request.getSession().getServletContext().getAttribute('app')}"></span> <br/>
+ServletContext3：<span th:text="${#servletContext.getAttribute('app')}"></span> <br/>
+ServletContext4：<span th:text="${application.app}"></span> <br/>
+
+<hr/>
+<!--绝对路径-->
+<a th:href="@{http://www.baidu.com}">绝对路径</a>
+<!--相对路径-->
+<a th:href="@{/index}">相对路径</a>
+<a th:href="@{~/index.html}">相对路径</a>
+<hr/>
+<a th:href="@{~/test(id=1,name='zhangsan')}">普通带参1</a>
+<a th:href="@{~/test?id=2&name=zhangsan}">普通带参2</a>
+<a th:href="@{~+'/test?id='+${id}+'&name='+${msg}}">普通带参3</a>
+<a th:href="@{~/test(id=${id},name=${session.ses})}">普通带参4</a>
+<hr/>
+<a th:href="@{~/hello/{id}/{name}(id=2,name='admin')}">Restful带参1</a>
+<a th:href="@{~/hello/{id}/{name}(id=${id},name=${msg})}">Restful带参2</a>
+<a th:href="@{~/hello/{id}(id=${id},name=${msg})}">Restful带参3</a>
+</body>
+</html>

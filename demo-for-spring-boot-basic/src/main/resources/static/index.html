@@ -5,6 +5,11 @@
     <title>index</title>
 </head>
 <body>
-<h1>Hello World!</h1>
+<h1>文件上传</h1>
+<form action="/fileUpload" method="post" enctype="multipart/form-data">
+    <label for="file">文件上传：</label>
+    <input id="file" type="file" name="file">
+    <input type="submit" value="上传">
+</form>
 </body>
 </html>

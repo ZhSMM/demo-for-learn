@@ -5,3 +5,12 @@ spring:
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
+  boot:
+    admin:
+      client:
+        url: http://localhost:9000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

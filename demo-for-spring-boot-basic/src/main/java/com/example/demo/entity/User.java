@@ -22,4 +22,5 @@ public class User {
     private int age;
     @Value("${user.hobby}")
     private String hobby;
+
 }

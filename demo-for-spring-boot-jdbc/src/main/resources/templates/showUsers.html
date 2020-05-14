@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" align="center">
+    <tr>
+        <th>用户ID</th>
+        <th>用户姓名</th>
+        <th>用户性别</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="u : ${users}">
+        <th th:text="${u.userId}"></th>
+        <th th:text="${u.userName}"></th>
+        <th th:text="${u.userSex}"></th>
+        <th>
+            <a th:href="@{/user/preupdate(id = ${u.userId})}">修改</a>
+            <a th:href="@{/user/delete(id = ${u.userId})}">删除</a>
+        </th>
+    </tr>
+</table>
+</body>
+</html>
