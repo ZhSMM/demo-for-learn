@@ -57,6 +57,8 @@
 
 6. 配置中央仓库的镜像，换成阿里的，在settings.xml文件中，在mirrors标签中添加子标签：
 
+   参考阿里官方文档：[https://developer.aliyun.com/mirror/maven](https://developer.aliyun.com/mirror/maven)
+
    ```
        <mirror>
          <id>nexus-aliyun</id>
